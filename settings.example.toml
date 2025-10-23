@@ -1,0 +1,45 @@
+# Thiết lập máy chủ
+SERVER_URL = "https://api.example.com/telemetry"
+SERVER_TOKEN = "replace-with-your-token"
+
+# Lựa chọn giao thức
+USE_MQTT = false
+MQTT_BROKER = "mqtt.example.com"
+MQTT_PORT = 8883
+MQTT_USERNAME = "user"
+MQTT_PASSWORD = "pass"
+MQTT_TOPIC = "vessel/{device_id}/telemetry"
+MQTT_TLS = true
+
+# Thông tin thiết bị
+DEVICE_ID = "PICO-SEA-0001"
+SEND_INTERVAL_S = 60
+BATCH_MAX = 20
+RETRY_BACKOFF_S = 30
+
+# GPS (UART/I2C tuỳ module)
+GPS_UART_TX = "GP4"
+GPS_UART_RX = "GP5"
+GPS_BAUDRATE = 9600
+GPS_MIN_HDOP = 2.0
+GPS_MIN_SATS = 4
+
+# Modem (GSM/LTE)
+MODEM_UART_TX = "GP8"
+MODEM_UART_RX = "GP9"
+MODEM_BAUDRATE = 115200
+APN = "internet"
+APN_USER = ""
+APN_PASS = ""
+
+# Nguồn & nhật ký
+LOW_BATTERY_V = 3.6
+ENABLE_LOG = true
+
+# Geofence polygon (chuỗi "lat,lon;lat,lon;...")
+# Ví dụ: khu vực quanh toạ độ Đà Nẵng
+GEOFENCE_POLYGON = "16.0600,108.2000;16.0600,108.2300;16.0750,108.2300;16.0750,108.2000"
+
+# Tuỳ chọn kiểm thử nhanh
+TEST_LAT = "16.0678"
+TEST_LON = "108.2140"
